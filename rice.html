@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rice Information</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    body{
+     background-image:url(https://kj1bcdn.b-cdn.net/media/54521/blog-rice.jpg?width=1200);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     
+    } 
+
+    .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-style:initial;
+  font-weight: bold;
+}
+
+.rice-info {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.rice-info h2 {
+  margin-top: 0;
+}
+
+.rice-info p {
+  margin-bottom: 0;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Rice Information</h1>
+    <div id="riceInfo"></div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <script>
+    window.addEventListener('load', function() {
+  var riceInfo = document.getElementById('riceInfo');
+  
+  // Simulated rice information
+  var rice = {
+    name: 'Rice',
+    scientificName: 'Oryza sativa',
+    description: 'Rice is a cereal grain and one of the most widely consumed staple foods in the world.',
+    origin: 'Asia',
+    uses: 'Rice is primarily consumed as a source of carbohydrates and is a staple food for more than half of the world\'s population. It can be cooked, steamed, boiled, or ground into flour for various dishes and food products.',
+    NutritionalValue:'Rice is a good source of energy, carbohydrates, and dietary fiber. It is low in fat, sodium, and cholesterol. The nutritional composition of rice varies depending on the variety and processing methods. Brown rice, which retains the bran and germ layers, is more nutritious than white rice, which is polished and processed to remove the bran and germ.',
+    CulturalSignificance:'Rice holds immense cultural and social significance in many countries, particularly in Asia. It has played a central role in traditional ceremonies, festivals, and cuisines across various cultures. Rice cultivation has shaped societies, influenced agricultural practices, and contributed to the economic development of many regions.',
+    Cultivation: 'Rice is primarily cultivated in flooded fields known as paddy fields or rice paddies. The crop requires ample water for growth, and the fields are often flooded or kept submerged during the early stages of growth. However, there are also upland or rain-fed rice cultivation methods that do not require flooding.',
+
+    Varieties: 'There are thousands of rice varieties cultivated worldwide, but they can be broadly classified into two main types: indica and japonica. Indica rice is typically long-grain, while japonica rice is short-grain. Other types of rice include aromatic rice varieties like basmati and jasmine.',
+
+    GrowingConditions: 'Rice is mainly grown in warm and humid regions. It requires temperatures between 20°C to 35°C (68°F to 95°F) during the growing season. The crop also needs an abundant water supply, either from rainfall or irrigation, and fertile soil.',
+
+    LifeCycle: 'The life cycle of rice includes several stages. The process starts with seed germination in a nursery, followed by transplanting the seedlings into the main paddy field. The crop then undergoes vegetative growth, flowering, and grain development. The maturity period ranges from around 90 to 200 days, depending on the variety.',
+
+    Production: 'The top rice-producing countries include China, India, Indonesia, Bangladesh, and Vietnam. These countries account for a significant portion of global rice production. However, rice is cultivated in many other parts of the world as well, including Africa, the Americas, and Europe.',
+
+    Importance: 'Rice is a staple food for a large part of the global population, particularly in Asia, where it forms the main dietary component for many people. It is a rich source of carbohydrates, provides essential nutrients, and serves as a primary source of income for farmers in many regions.',
+
+    Challenges: 'Rice cultivation faces various challenges, including pests and diseases, water scarcity, climate change impacts, and the need for sustainable farming practices. Researchers and farmers are continuously working to develop improved rice varieties, implement efficient irrigation systems, and adopt environmentally friendly cultivation methods.',
+
+
+};
+  
+  // Generate rice information elements
+  var riceElement = document.createElement('div');
+  riceElement.classList.add('rice-info');
+  
+  var riceName = document.createElement('h2');
+  riceName.textContent = rice.name;
+  
+  var scientificName = document.createElement('p');
+  scientificName.textContent = 'Scientific Name: ' + rice.scientificName;
+  
+  var description = document.createElement('p');
+  description.textContent = rice.description;
+  
+  var origin = document.createElement('p');
+  origin.textContent = 'Origin: ' + rice.origin;
+  
+  var uses = document.createElement('p');
+  uses.textContent = 'Uses: ' + rice.uses;
+
+  var NutritionalValue = document.createElement('p');
+  NutritionalValue.textContent = 'NutritionalValue: ' + rice.NutritionalValue;
+
+  var CulturalSignificance = document.createElement('p');
+  CulturalSignificance.textContent = 'CulturalSignificance: ' + rice.CulturalSignificance;
+
+  var Cultivation = document.createElement('p');
+  Cultivation.textContent = 'Cultivation: ' + rice.Cultivation;
+
+  var Varieties = document.createElement('p');
+  Varieties.textContent = 'Varieties: ' + rice.Varieties;
+
+  var GrowingConditions = document.createElement('p');
+  GrowingConditions.textContent = 'GrowingConditions: ' + rice.GrowingConditions;
+
+  var LifeCycle = document.createElement('p');
+  LifeCycle.textContent = 'LifeCycle: ' + rice.LifeCycle;
+
+  var Production = document.createElement('p');
+  Production.textContent = 'Production: ' + rice.Production;
+
+  var Importance = document.createElement('p');
+  Importance.textContent = 'Importance: ' + rice.Importance;
+
+  var Challenges = document.createElement('p');
+  Challenges.textContent = 'Challenges: ' + rice.Challenges;
+  
+  riceElement.appendChild(riceName);
+  riceElement.appendChild(scientificName);
+  riceElement.appendChild(description);
+  riceElement.appendChild(origin);
+  riceElement.appendChild(uses);
+  riceElement.appendChild(NutritionalValue);
+  riceElement.appendChild(CulturalSignificance);
+  riceElement.appendChild(Cultivation);
+  riceElement.appendChild(Varieties);
+  riceElement.appendChild(GrowingConditions);
+  riceElement.appendChild(LifeCycle);
+  riceElement.appendChild(Production);
+  riceElement.appendChild(Importance);
+  riceElement.appendChild(Challenges);
+  
+  riceInfo.appendChild(riceElement);
+});
+
+  </script>
+</body>
+</html>

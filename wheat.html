@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wheat Information</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+   body{
+     background-image:url(https://kj1bcdn.b-cdn.net/media/81142/wheat.jpg?width=1200);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     
+
+     
+   } 
+   .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-style:initial;
+  font-weight: bold;
+  
+}
+
+.info {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.info h2 {
+  margin-top: 0;
+}
+
+.info p {
+  margin-bottom: 0;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Wheat Information</h1>
+    <div id="wheatInfo"></div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    window.addEventListener('load', function() {
+  var wheatInfo = document.getElementById('wheatInfo');
+
+  // Simulated wheat information
+  var wheatData = {
+    name: 'Wheat',
+    scientificName: 'Triticum',
+    family: 'Poaceae',
+    description: 'Wheat is a cereal grain used to make flour for bread, pasta, and other baked goods. It is one of the most widely cultivated and important staple crops in the world.',
+    origin: 'Wheat originated in the Middle East and has been cultivated for thousands of years.',
+    cultivation: 'Wheat requires well-drained soil and a temperate climate. It is typically sown in the fall and harvested in the summer.',
+    uses: 'Wheat is primarily used for making various food products, including bread, pasta, pastries, and cereals. It is also used for animal feed and industrial purposes.',
+    GrowthAndLifecycle:'Wheat is an annual cereal crop that completes its lifecycle within a single growing season.The lifecycle of wheat consists of several stages: germination, vegetative growth, reproductive growth, grain development, and maturation.Germination occurs when the seed absorbs water and begins sprouting.During vegetative growth, the plant develops roots, stems, and leaves.Reproductive growth involves the formation of flowers and the transfer of pollen for fertilization.Grain development takes place after fertilization, where the grains develop and fill.Maturation occurs when the grains reach their maximum size and moisture content, indicating readiness for harvest.',
+
+    Varieties:'There are numerous varieties of wheat grown worldwide, with different characteristics, including grain size, color, protein content, and adaptability to different climates.Common wheat varieties include hard wheat (used for bread-making), soft wheat (used for pastries and cakes), and durum wheat (used for pasta production).',
+
+    CultivationPractices:'Wheat is primarily cultivated in temperate regions with cool winters and mild springs.It can be grown in various soil types, but well-drained loamy soils are considered most suitable.Farmers typically prepare the soil by plowing, harrowing, and leveling to create a favorable seedbed.Wheat can be sown using different methods, including broadcasting (scattering seeds), drill seeding (using a seed drill), or direct drilling (seeding without prior soil preparation).',
+    EnvironmentalRequirements:'Wheat requires cool temperatures during early growth and warmer temperatures during grain development.The optimal temperature range for wheat growth is between 15°C and 24°C (59°F and 75°F).Adequate moisture is essential, particularly during critical growth stages like germination, flowering, and grain filling.Wheat crops benefit from receiving around 500-600 mm (20-24 inches) of rainfall during the growing season, but irrigation can supplement rainfall in regions with lower precipitation.',
+
+    };
+
+  // Create wheat information elements
+  var infoElement = document.createElement('div');
+  infoElement.classList.add('info');
+
+  var wheatName = document.createElement('h2');
+  wheatName.textContent =  wheatData.name;
+
+  var scientificName = document.createElement('p');
+  scientificName.textContent = 'Scientific Name: ' + wheatData.scientificName;
+
+  var family = document.createElement('p');
+  family.textContent = 'Family: ' + wheatData.family;
+
+  var description = document.createElement('p');
+  description.textContent = 'description:' +wheatData.description;
+
+  var origin = document.createElement('p');
+  origin.textContent = 'Origin:' + wheatData.origin;
+
+  var cultivation = document.createElement('p');
+  cultivation.textContent = 'Cultivation:' + wheatData.cultivation;
+
+  var uses = document.createElement('p');
+  uses.textContent = 'Uses:' + wheatData.uses;
+
+  var GrowthAndLifecycle = document.createElement('p');
+  GrowthAndLifecycle.textContent ='GrowthAndLifecycle:'  + wheatData.GrowthAndLifecycle;
+
+
+  var Varieties = document.createElement('p');
+  Varieties.textContent = 'Varieties:' + wheatData.Varieties;
+
+
+  var CultivationPractices = document.createElement('p');
+  CultivationPractices.textContent = 'CultivationPractices:' + wheatData.CultivationPractices;
+
+
+  var EnvironmentalRequirements = document.createElement('p');
+  EnvironmentalRequirements.textContent ='EnvironmentalRequirements:' + wheatData.EnvironmentalRequirements;
+
+
+  infoElement.appendChild(wheatName);
+  infoElement.appendChild(scientificName);
+  infoElement.appendChild(family);
+  infoElement.appendChild(description);
+  infoElement.appendChild(origin);
+  infoElement.appendChild(cultivation);
+  infoElement.appendChild(uses);
+  infoElement.appendChild(GrowthAndLifecycle);
+  infoElement.appendChild(Varieties);
+  infoElement.appendChild(CultivationPractices);
+  infoElement.appendChild(EnvironmentalRequirements);
+
+  wheatInfo.appendChild(infoElement);
+});
+
+document.getElementById("dropdown").addEventListener("change", function() {
+          var selectedValue = this.value; // Get the selected value
+          window.location.href = selectedValue; // Redirect to the selected page
+        });
+
+  </script>
+  <p></p>
+</body>
+</html>
